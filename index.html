@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-home" class="nav-link active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" id="nav-tools" class="nav-link">Tools</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="nav-voxel-generator">Voxel Background Generator</a>
+                    </div>
+                </li>
+                <li><a href="#" id="nav-credits" class="nav-link">Credits</a></li>
+                <li><a href="#" id="nav-license" class="nav-link">License</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home-section" class="content-section active">
+            <h2>Welcome to My Portfolio!</h2>
+            <p>This is a collection of various tools and resources I've built.</p>
+            <p>Navigate through the tabs above to explore different sections. The "Tools" tab currently features a "Voxel Background Generator".</p>
+        </section>
+
+        <section id="voxel-generator-section" class="content-section">
+            <h1>Voxel Background Generator</h1>
+
+            <div id="controls">
+                <div>
+                    <label for="widthInput">Width</label>
+                    <input type="number" id="widthInput" value="512" min="1" />
+                </div>
+                <div>
+                    <label for="heightInput">Height</label>
+                    <input type="number" id="heightInput" value="512" min="1" />
+                </div>
+                <div>
+                    <label for="noisinessInput">Noisiness (Shape Count)</label>
+                    <input type="number" id="noisinessInput" value="50" min="10" max="500" />
+                </div>
+                <div>
+                    <label for="bgColorInput">Background Color</label>
+                    <input type="color" id="bgColorInput" value="#7c46af" />
+                </div>
+                <div>
+                    <label for="shapeColorInput">Shape Color</label>
+                    <input type="color" id="shapeColorInput" value="#000000" />
+                </div>
+                <div>
+                    <label for="sizeInput">Shape Scale</label>
+                    <input type="number" id="sizeInput" value="1" min="1" max="50" step="1" />
+                </div>
+                <div>
+                    <label for="shapeSelect">Shape Type</label>
+                    <select id="shapeSelect">
+                        <option value="square">Square</option>
+                        <option value="circle">Circle</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="diamond">Diamond</option>
+                        <option value="oval">Oval (Ellipse)</option>
+                        <option value="rounded_square">Rounded Square</option>
+                        <option value="line_horizontal">Line (Horizontal)</option>
+                        <option value="line_vertical">Line (Vertical)</option>
+                        <option value="star">Star (5-pointed)</option>
+                        <option value="hexagon">Hexagon</option>
+                        <option value="pentagon">Pentagon</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="randomizeColorToggle">Randomize Colors</label>
+                    <input type="checkbox" id="randomizeColorToggle" />
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <button id="generateBtn">Generate</button>
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <button id="downloadPngBtn">Download PNG</button>
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <button id="downloadJsonBtn">Download JSON</button>
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <button id="copyJsonBtn">Copy JSON</button>
+                </div>
+            </div>
+
+            <canvas id="bg"></canvas>
+        </section>
+
+        <section id="credits-section" class="content-section">
+            <h2>Credits</h2>
+            <p>This Voxel Background Generator was inspired by various open-source projects and creative coding experiments.</p>
+            <p>Developed and refined as part of my portfolio. Font used: <a href="https://fonts.google.com/specimen/Inter" target="_blank" style="color: #62c0db;">Inter</a> from Google Fonts.</p>
+            <p>A special thanks to the web development community for the invaluable resources and knowledge shared.</p>
+        </section>
+
+        <section id="license-section" class="content-section">
+            <h2>License</h2>
+            <p>This project is open-source and licensed under the MIT License.</p>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </section>
+    </main>
+
+    <div class="music-player-bar">
+        <div class="player-left">
+            <img src="" alt="Album Art" class="album-art" id="albumArt">
+            <div class="song-info">
+                <div class="song-title" id="songTitle"></div>
+                <div class="artist-name" id="artistName"></div>
+            </div>
+            <div class="heart-icon control-icon">
+                <span class="material-icons">favorite_border</span>
+            </div>
+        </div>
+
+        <div class="player-middle">
+            <div class="playback-controls">
+                <div class="control-icon" id="shuffleBtn"><span class="material-icons">shuffle</span></div>
+                <div class="control-icon" id="skipPrevBtn"><span class="material-icons">skip_previous</span></div>
+                <div class="control-icon main-play-pause">
+                    <span class="material-icons" id="playPauseIcon">play_arrow</span>
+                </div>
+                <div class="control-icon" id="skipNextBtn"><span class="material-icons">skip_next</span></div>
+                <div class="control-icon" id="repeatBtn"><span class="material-icons">repeat</span></div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="current-time" id="currentTime">0:00</div>
+                <input type="range" class="progress-bar" id="progressBar" min="0" max="100" value="0">
+                <div class="total-duration" id="totalDuration"></div>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <div class="control-icon"><span class="material-icons">mic</span></div>
+            <div class="control-icon"><span class="material-icons">queue_music</span></div>
+            <div class="volume-controls">
+                <div class="control-icon"><span class="material-icons">volume_up</span></div>
+                <input type="range" class="volume-bar" id="volumeBar" min="0" max="100" value="70">
+            </div>
+            <div class="expand-button">
+                <span class="material-icons">keyboard_arrow_up</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
