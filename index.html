@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player UI</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player-bar">
+        <div class="player-left">
+            <img src="" alt="Album Art" class="album-art" id="albumArt">
+            <div class="song-info">
+                <div class="song-title" id="songTitle"></div>
+                <div class="artist-name" id="artistName"></div>
+            </div>
+            <div class="heart-icon control-icon">
+                <span class="material-icons">favorite_border</span>
+            </div>
+        </div>
+
+        <div class="player-middle">
+            <div class="playback-controls">
+                <div class="control-icon" id="shuffleBtn"><span class="material-icons">shuffle</span></div>
+                <div class="control-icon" id="skipPrevBtn"><span class="material-icons">skip_previous</span></div>
+                <div class="control-icon main-play-pause">
+                    <span class="material-icons" id="playPauseIcon">play_arrow</span>
+                </div>
+                <div class="control-icon" id="skipNextBtn"><span class="material-icons">skip_next</span></div>
+                <div class="control-icon" id="repeatBtn"><span class="material-icons">repeat</span></div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="current-time" id="currentTime">0:00</div>
+                <input type="range" class="progress-bar" id="progressBar" min="0" max="100" value="0">
+                <div class="total-duration" id="totalDuration"></div>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <div class="control-icon"><span class="material-icons">mic</span></div>
+            <div class="control-icon"><span class="material-icons">queue_music</span></div>
+            <div class="volume-controls">
+                <div class="control-icon"><span class="material-icons">volume_up</span></div>
+                <input type="range" class="volume-bar" id="volumeBar" min="0" max="100" value="70">
+            </div>
+            <div class="expand-button">
+                <span class="material-icons">keyboard_arrow_up</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
