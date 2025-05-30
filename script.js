@@ -32,32 +32,25 @@ const skipNextBtn = document.getElementById('skipNextBtn');
 
 const playlist = [
     {
-        title: "White Flag",
-        artist: "Dido",
-        durationSeconds: 810 ,
-        audioFileName: "white_flag.mp3",
-        imageFileName: "white_flag.png"
+        title: "The Ultimate Journey",
+        artist: "Celestial Cadence",
+        durationSeconds: 810,
+        audioFileName: "song1.mp3",
+        imageFileName: "image1.png"
     },
     {
-        title: "Echoes of Tomorrow",
-        artist: "Lunar Dreams",
+        title: "Mystery Beneath The Waves",
+        artist: "Abyssal Acoustics",
         durationSeconds: 157,
         audioFileName: "song2.mp3",
         imageFileName: "image2.png"
     },
     {
-        title: "City Lights & Rain",
-        artist: "Urban Symphony",
+        title: "City Echoes at Dawn",
+        artist: "Concrete Sonatas",
         durationSeconds: 227,
         audioFileName: "song3.mp3",
         imageFileName: "image3.png"
-    },
-    {
-        title: "Crimson Horizon",
-        artist: "Sunset Groove",
-        durationSeconds: 192,
-        audioFileName: "song4.mp3",
-        imageFileName: "image4.png"
     }
 ];
 
