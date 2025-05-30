@@ -1,5 +1,5 @@
 # Voxel-background-generator
--# Made by: Muskiei And Orignal project by "g07hn"
+- Made by: Muskiei And Orignal project by "g07hn"
 
 
 
