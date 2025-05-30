@@ -7,4 +7,4 @@ This project owes a special thanks to **g07hn**, who developed the original Voxe
 
 You can explore the original project here: https://g07hn-1.github.io/voxelgen/
 
-I also appreciate the discussions and insights gained from **g07hn on Discord** during the creation of this enhanced generator.
+I also appreciate the discussions and insights gained from **g07hn on Discord** during the creation of this  generator.
